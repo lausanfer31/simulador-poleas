@@ -497,7 +497,6 @@ interface WeightBlockProps {
   tension: number;
   weight: number;
   acceleration: number;
-  velocity: number;
   side: 'left' | 'right';
   showForces: boolean;
   showAcceleration: boolean;
@@ -513,7 +512,6 @@ const WeightBlock: React.FC<WeightBlockProps> = React.memo(
     tension,
     weight,
     acceleration,
-    velocity,
     side,
     showForces,
     showAcceleration,
@@ -1132,7 +1130,6 @@ export const PulleyScene3D: React.FC<PulleyScene3DProps> = ({
             tension={physicsState.tension1}
             weight={weight1}
             acceleration={physicsState.acceleration1}
-            velocity={physicsState.velocity1}
             side="left"
             showForces={showForces}
             showAcceleration={showAcceleration}
@@ -1148,7 +1145,6 @@ export const PulleyScene3D: React.FC<PulleyScene3DProps> = ({
             tension={physicsState.tension2}
             weight={weight2}
             acceleration={physicsState.acceleration2}
-            velocity={physicsState.velocity2}
             side="right"
             showForces={showForces}
             showAcceleration={showAcceleration}
